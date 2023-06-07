@@ -1,0 +1,147 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    margin: 0;
+    background-color: #fff;
+    color: #212529;
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+#hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    height: 100vh;
+    background: #fff;
+    color: #272341;
+    padding: 0 5.6rem;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+    color: #373833;
+}
+
+.name-title {
+    margin-bottom: -0.7rem;
+}
+
+.position-title {
+    margin-top: -0.2rem;
+}
+
+.text-color-main {
+    color: #DD4949;
+}
+
+.hero-cta {
+    display: flex;
+}
+
+.cta-btn {
+    padding: 15px 30px;  /* Increase button size by increasing padding */
+    border: 4px solid #DD4949; /* Increase outline thickness by increasing border width */
+    border-radius: 0;
+    cursor: pointer;
+    margin-right: -2px; /* Adjust for the increased border width */
+}
+
+.cta-btn a {
+    text-decoration: none;
+    color: #DD4949;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+@media (max-width: 992px) {
+    .hero-title {
+      font-size: 2.5rem;
+    }
+  
+    .cta-btn {
+      padding: 10px 20px;
+      border-width: 2px;
+    }
+  
+    .cta-btn a {
+      font-size: 16px;
+    }
+  
+    #hero {
+      padding: 0 3rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .hero-title {
+      font-size: 2rem;
+    }
+  
+    .cta-btn {
+      padding: 8px 16px;
+      border-width: 1px;
+    }
+  
+    .cta-btn a {
+      font-size: 14px;
+    }
+  
+    #hero {
+      padding: 0 2rem;
+    }
+  
+    .hero-cta {
+      flex-direction: column;
+    }
+  
+    .cta-btn {
+      margin-top: 10px;
+    }
+  }
+  
+  @media (max-width: 390px) {
+    .hero-title {
+      font-size: 1.7rem;
+      margin-bottom: 1rem;  /* add more space between the titles */
+    }
+  
+    .cta-btn {
+      padding: 8px 16px;
+      border-width: 1px;
+    }
+  
+    .cta-btn a {
+      font-size: 14px;
+    }
+  
+    #hero {
+      padding: 0 2rem;
+    }
+  
+    .hero-cta {
+      flex-direction: row;  /* set direction of buttons back to row */
+      flex-wrap: wrap;  /* allow the buttons to wrap onto multiple lines */
+      justify-content: space-between;  /* evenly distribute the buttons across the line */
+    }
+  
+    .cta-btn {
+      margin-top: 10px;
+      flex: 1 0 auto;  /* allow the buttons to grow and shrink as needed, but don't allow them to base their size on their content */
+      margin-right: 5px;  /* add a bit of space between the buttons */
+      margin-left: 5px;  /* add a bit of space between the buttons */
+    }
+  }
+  
