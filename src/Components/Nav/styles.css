@@ -15,12 +15,12 @@
   }
   
   .icon {
-    transform: rotate(10deg) scale(0.7);
+    transform: rotate(10deg) scale(0.8);
     transition: transform 0.25s ease-in-out;
   }
   
   .icon:hover {
-    transform: rotate(0deg) scale(1);
+    transform: rotate(0deg) scale(1.2);
     cursor: pointer;
   }
   
