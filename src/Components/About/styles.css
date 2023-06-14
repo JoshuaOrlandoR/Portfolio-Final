@@ -1,3 +1,90 @@
 .about-container {
-    /* styles for About component */
+    position: relative;
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    background-color: transparent;
+    margin-top: 1.2rem; /* adjust this value to move the component down */
+}
+
+.about-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #E8EAE3;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 2px;
+    background-color: transparent;
+    padding-top: 2rem ;
+    margin-top: 5%;
+    margin-bottom: 2rem; /* adjust this value to create more space under the title */
+}
+
+.about-content {
+    display: flex;
+    width: 90%;
+    height: 60vh;
+}
+
+.about-images {
+    width: 40%;
+    height: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    border: 1px solid red;
+}
+
+.about-text {
+    width: 60%;
+    height: 300px;
+    font-size: 16px;
+    color: #E8EAE3;
+    font-weight:600;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 1px;
+    padding-left: 15px;
+}
+
+.resume-button {
+    padding: .8rem 1.5rem;
+    border: 2px solid #E8EAE3;  
+    background-color: transparent;
+    color: #E8EAE3;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    position: relative; 
+    overflow: hidden;  
+    transition: all 0.2s ease; 
+    z-index: 1;
+    text-decoration: none;
+    margin-top: 2%;
+}
+
+.resume-button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #E8EAE3;
+    transition: width .65s;
+    z-index: -1;
+}
+
+.resume-button:hover {
+    color: #DD4949;
+}
+
+.resume-button:hover::after {
+    width: 100%;
 }

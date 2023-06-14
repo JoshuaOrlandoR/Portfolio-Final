@@ -84,7 +84,7 @@ const Skills = () => {
     <div id="skills" className="skills-container" style={{position: "relative"}}>
       {/* SVG background */}
       <svg style={{position: "absolute", width: "100%", height: "100%", zIndex: -1}} viewBox="0 0 100 100" preserveAspectRatio="none">
-        <polygon points="0,0 100,0 100,100 0,85" fill="#DD4949" />
+        <polygon points="0,0 100,0 100,100 0,87" fill="#DD4949" />
       </svg>
       <h2 className="skills-title">Skills</h2>
       <div className="skills-content-wrapper">
