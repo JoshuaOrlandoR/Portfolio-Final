@@ -8,7 +8,8 @@
     align-items: center;
     margin: auto;
     background-color: transparent;
-    margin-top: 1.2rem; /* adjust this value to move the component down */
+    margin-top: 1.2rem;
+    margin-bottom: -7rem;
 }
 
 .about-title {
@@ -50,6 +51,7 @@
     font-family: 'Montserrat', sans-serif;
     letter-spacing: 1px;
     padding-left: 15px;
+    line-height: 1.6;
 }
 
 .resume-button {

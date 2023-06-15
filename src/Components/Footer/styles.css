@@ -1,3 +1,42 @@
 .footer-container {
-    /* styles for Footer component */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 15vh;
+    width:100%;
+    background-color: #373833;
+    color: #E8EAE3;
+}
+
+.scroll-top {
+    border: none;
+    background: transparent;
+    color: #E8EAE3;
+    cursor: pointer;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.scroll-top:hover {
+    color: #DD4949;
+}
+
+.footer-social-container {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+}
+
+.footer-icon {
+    font-size: 2.5rem;
+    color: #E8EAE3;
+    transform: rotate(10deg) scale(0.8);
+    transition: transform 0.25s ease-in-out;
+}
+
+.footer-icon:hover {
+    color: #DD4949;
+    transform: rotate(0deg) scale(1.2);
+    cursor: pointer;
 }
