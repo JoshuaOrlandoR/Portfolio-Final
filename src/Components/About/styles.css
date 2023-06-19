@@ -55,12 +55,12 @@
 }
 
 .resume-button {
-    padding: .8rem 1.5rem;
-    border: 2px solid #E8EAE3;  
+    padding: 8px 30px;
+    border: 4px solid #E8EAE3;  
     background-color: transparent;
     color: #E8EAE3;
     font-family: 'Montserrat', sans-serif;
-    font-size: 1rem;
+    font-size: 20px;
     font-weight: 700;
     cursor: pointer;
     position: relative; 
@@ -79,7 +79,7 @@
     width: 0;
     height: 100%;
     background: #E8EAE3;
-    transition: width .65s;
+    transition: width .40s;
     z-index: -1;
 }
 

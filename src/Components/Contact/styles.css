@@ -68,7 +68,7 @@
     cursor: pointer;
     position: relative;
     overflow: hidden;
-    transition: all 0.4s ease;
+    transition: all 0.35s ease;
 }
 
 .contact-form button::after {
@@ -79,7 +79,7 @@
     width: 0;
     height: 100%;
     background: #DD4949;
-    transition: width .4s;
+    transition: width .35s;
     z-index: -1;
 }
 

@@ -47,7 +47,7 @@
     cursor: pointer;
     position: relative; 
     overflow: hidden;  
-    transition: all 0.3s ease;
+    transition: all 0.4s ease;
     margin-bottom: 20px; 
 }
 
@@ -63,7 +63,7 @@
     width: 0;
     height: 100%;
     background: #E8EAE3;
-    transition: width .65s;
+    transition: width .4s;
     z-index: 0;
     z-index: -1;
 }
