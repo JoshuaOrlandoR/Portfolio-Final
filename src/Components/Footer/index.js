@@ -14,13 +14,13 @@ const Footer = () => {
     <div className="footer-container">
       <button className="scroll-top" onClick={scrollToTop}><FaArrowUp /></button>
       <div className="footer-social-container">
-        <a href="https://github.com/" target="_blank" rel="noreferrer">
+        <a href="https://github.com/JoshuaOrlandoR" target="_blank" rel="noreferrer">
           <FaGithub className="footer-icon" />
         </a>
-        <a href="https://linkedin.com/" target="_blank" rel="noreferrer">
+        <a href="https://www.linkedin.com/in/joshua-ramkissoon-140650265/" target="_blank" rel="noreferrer">
           <FaLinkedin className="footer-icon" />
         </a>
-        <a href="https://youtube.com/" target="_blank" rel="noreferrer">
+        <a href="https://www.youtube.com/channel/UCLP_0nXETO-jGikzIAhrqjA" target="_blank" rel="noreferrer">
           <FaYoutube className="footer-icon" />
         </a>
         <a href="https://resume.com/" target="_blank" rel="noreferrer">
