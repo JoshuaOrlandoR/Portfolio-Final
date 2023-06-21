@@ -33,14 +33,16 @@ const Projects = () => {
       thumbnail: 'https://project2.com/thumbnail.jpg'
     },
     {
-      title: 'Project 3',
-      techStack: ['Python', 'Django', 'PostgreSQL'],
-      description: 'This is a description of project 3',
+      title: 'Pic-Nic',
+      techStack: ['HTML', 'CSS/BootStrap', 'JavaScript','Express', 'MySql', 'Sequelize', 'Handlebars', 'Node'],
+      description: 'Pic-Nic is a simple social media site focused on food! Users can sign up, create, and share recipies!',
       authors: [
-        { name: 'Author3', github: 'https://github.com/author3' },
+        { name: 'Kenny', github: 'https://github.com/kcl20' },
+        { name: 'Joseph', github: 'https://github.com/jveyhl' },
+        { name: 'Joshua', github: 'https://github.com/JoshuaOrlandoR' },
       ],
-      githubLink: 'https://github.com/author3/project3',
-      liveLink: 'N/A',  // live site not available
+      githubLink: 'https://github.com/jveyhl/pic-nic',
+      liveLink: 'N/A',  
       video: 'https://www.youtube.com/embed/video',
       thumbnail: 'https://project3.com/thumbnail.jpg'
     },
