@@ -1,30 +1,11 @@
-import React, { useState } from "react";
-import { 
-  FaHtml5, 
-  FaCss3Alt, 
-  FaJsSquare, 
-  FaReact, 
-  FaRedux, 
-  FaNodeJs, 
-  FaGitAlt,
-  FaBootstrap,
-} from "react-icons/fa";import './styles.css';
-
-import {
-  SiJquery,
-  SiRedux,
-  SiVite,
-  SiHandlebarsdotjs,
-  SiExpress,
-  SiMongodb,
-  SiPwa,
-  SiGraphql,
-  SiWebflow
-} from "react-icons/si";
-import { TbApi } from "react-icons/tb";
-import { GrMysql } from "react-icons/gr";
-import { FiServer } from "react-icons/fi";
-
+import React, { useState } from 'react';
+import { FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaRedux, FaNodeJs, FaGitAlt, FaBootstrap } from 'react-icons/fa';
+import { SiJquery, SiRedux, SiVite, SiHandlebarsdotjs, SiExpress, SiMongodb, SiPwa, SiGraphql, SiWebflow } from 'react-icons/si';
+import { TbApi } from 'react-icons/tb';
+import { GrMysql } from 'react-icons/gr';
+import { FiServer } from 'react-icons/fi';
+import VisibilitySensor from 'react-visibility-sensor';
+import './styles.css';
 
 const SKILLS_MAP = {
   'Front-End': [
@@ -56,6 +37,7 @@ const SKILLS_MAP = {
 
 const Skills = () => {
   const [currentCategory, setCurrentCategory] = useState(null);
+  const [isVisible, setIsVisible] = useState(false);
 
   const handleButtonClick = (category) => {
     setCurrentCategory(category);
@@ -63,12 +45,12 @@ const Skills = () => {
 
   const renderIcons = () => {
     if (!currentCategory) return null;
-  
+
     const skills = SKILLS_MAP[currentCategory];
-    return skills.map(skill => {
+    return skills.map((skill) => {
       const Icon = skill.icon;
       return (
-        <div className="single-skill-wrapper">
+        <div className="single-skill-wrapper" key={skill.name}>
           <div className="skill-icon" style={{ color: skill.color }}>
             <Icon size={70} />
           </div>
@@ -80,29 +62,38 @@ const Skills = () => {
     });
   };
 
+  const onVisibilityChange = (isVisible) => {
+    if (isVisible) setIsVisible(true);
+  };
+
   return (
-    <div id="skills" className="skills-container" style={{position: "relative"}}>
-      {/* SVG background */}
-      <svg style={{position: "absolute", width: "100%", height: "100%", zIndex: -1}} viewBox="0 0 100 100" preserveAspectRatio="none">
-        <polygon points="0,0 100,0 100,100 0,87" fill="#DD4949" />
-      </svg>
-      <h2 className="skills-title">Skills</h2>
-      <div className="skills-content-wrapper">
-        <div className="button-wrapper">
-          <button className="skill-button" onClick={() => handleButtonClick('Front-End')}>Front-End</button>
-          <button className="skill-button" onClick={() => handleButtonClick('Back-End')}>Back-End</button>
-          <button className="skill-button" onClick={() => handleButtonClick('Other Technologies')}>Other Technologies</button>
-        </div>
-        <div className="icon-wrapper">
-          <div className="skill-icon-title-wrapper">
-            <h2 className="skill-title-h2">{currentCategory}</h2>
+    <VisibilitySensor onChange={onVisibilityChange} partialVisibility>
+      <div id="skills" className={`skills-container ${isVisible ? 'fade-in' : ''}`}>
+        <svg style={{ position: 'absolute', width: '100%', height: '100%', zIndex: -1 }} viewBox="0 0 100 100" preserveAspectRatio="none">
+          <polygon points="0,0 100,0 100,100 0,87" fill="#DD4949" />
+        </svg>
+        <h2 className="skills-title">Skills</h2>
+        <div className="skills-content-wrapper">
+          <div className="button-wrapper">
+            <button className="skill-button" onClick={() => handleButtonClick('Front-End')}>
+              Front-End
+            </button>
+            <button className="skill-button" onClick={() => handleButtonClick('Back-End')}>
+              Back-End
+            </button>
+            <button className="skill-button" onClick={() => handleButtonClick('Other Technologies')}>
+              Other Technologies
+            </button>
           </div>
-          <div className="skill-icon-list">
-            {renderIcons()}
+          <div className="icon-wrapper">
+            <div className="skill-icon-title-wrapper">
+              <h2 className="skill-title-h2">{currentCategory}</h2>
+            </div>
+            <div className="skill-icon-list">{renderIcons()}</div>
           </div>
         </div>
       </div>
-    </div>
+    </VisibilitySensor>
   );
 };
 
